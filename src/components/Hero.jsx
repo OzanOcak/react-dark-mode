@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import logo
-import LogoDark from "../assets/img/logo-dark.svg";
-import LogoWhite from "../assets/img/logo-white.svg";
+import LogoDark from "../assets/img/logo.svg";
+import LogoWhite from "../assets/img/logod.svg";
 // import icons
 import {
   BsFillSunFill,
@@ -47,7 +47,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-[740px] h-screen w-full bg-heroLight bg-cover bg-center bg-no-repeat overflow-hidden dark:bg-heroDark">
+    <section className="min-h-[740px] h-screen w-full bg-white bg-cover bg-center bg-no-repeat overflow-hidden dark:bg-black">
       <div className="container mx-auto px-4 lg:px-0">
         {/* header */}
         <header className="flex items-center justify-between py-8">
@@ -55,9 +55,14 @@ const Hero = () => {
           <div>
             <a href="#">
               {theme === "light" ? (
-                <img src={LogoDark} />
+                <div className="flex font-extrabold text-2xl">
+                  <img src={LogoDark} /> <p>GOOD COW</p>
+                </div>
               ) : (
-                <img src={LogoWhite} />
+                <div className="flex font-extrabold text-2xl">
+                  <img src={LogoWhite} />{" "}
+                  <p className="text-green-700">GOOD COW</p>
+                </div>
               )}
             </a>
           </div>
